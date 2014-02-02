@@ -3,38 +3,61 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Podmaker</title>
+	<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/foundation.min.css">
 
 	<style type="text/css">
 		.pod-box {
-			width: 300px;
+			/*width: 300px;*/
 			height: 300px;
 			background: yellow;
 			border: 1px solid #000;
 			float: left;
 		}
+		.pod-box:nth-child(1) {background: orange;}
+		.pod-box:nth-child(2) {background: lightyellow;}
+		.pod-box:nth-child(3) {background: lightblue;}
+		.pod-box:nth-child(4) {background: lightgreen;}
 		.student-circle {
-			height: 100px;
-			width: 100px;
-			border: 1px solid #000;
+			height: 60px;
+			width: 60px;
+			/*border: 1px solid #000;*/
+			z-index: 1000;
+		}
+		.student-circle img {
+			width: 60px;
+			-webkit-border-radius: 100%;
+			border-radius: 100%;
+			cursor: pointer;
 		}
 	</style>
 </head>
 <body>
-	<div class="student-circle draggable">
-		<img src="" />
+	<div class="row">
+		<h1>Podmaker 2</h1>
+	</div>
+	<div class="row">
+		<div class="student-circle draggable" data-studentid="1" data-studentname="Clay Stewart">
+			<img src="http://en.gravatar.com/userimage/50436475/31231ef1b819427e47be5dbf8ba7c521.jpg?size=200" />
+		</div>
 	</div>
 
-	<div id="pod1" class="pod-box"></div>
-	<div id="pod2" class="pod-box"></div>
-	<div id="pod3" class="pod-box"></div>
-	<div id="pod4" class="pod-box"></div>
-
-<!-- jQuery -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<!-- jQuery UI -> to get draggable and droppable -->
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-<!-- main.js  -->
-<script type="text/javascript" src="main.js"></script>
-
+	<div class="row" id="pod-box-headers">
+		<div id="pod1-header" class="large-3 columns pod-box-header"><h3>Pod 1</h3></div>
+		<div id="pod2-header" class="large-3 columns pod-box-header"><h3>Pod 2</h3></div>
+		<div id="pod3-header" class="large-3 columns pod-box-header"><h3>Pod 3</h3></div>
+		<div id="pod4-header" class="large-3 columns pod-box-header"><h3>Pod 4</h3></div>
+	</div>
+	<div class="row">
+		<div id="pod1" class="large-3 columns pod-box"></div>
+		<div id="pod2" class="large-3 columns pod-box"></div>
+		<div id="pod3" class="large-3 columns pod-box"></div>
+		<div id="pod4" class="large-3 columns pod-box"></div>
+	</div>
+	<!-- jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<!-- jQuery UI -> to get draggable and droppable -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<!-- main.js  -->
+	<script type="text/javascript" src="main.js"></script>
 </body>
 </html>

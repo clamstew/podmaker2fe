@@ -1,5 +1,5 @@
 (function(){
-	$(".draggable").draggable();
+	$(".draggable").draggable({revert: "invalid"});
 	$('.pod-box').droppable({
 		drop: function( event, ui ) {
 			window.lastBox = $(this);
