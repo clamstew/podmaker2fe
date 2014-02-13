@@ -1,0 +1,22 @@
+.pod-box {
+	height: 300px;
+	background: yellow;
+	border: 1px solid #000;
+	float: left;
+}
+.pod-box:nth-child(1) {background: orange;}
+.pod-box:nth-child(2) {background: lightyellow;}
+.pod-box:nth-child(3) {background: lightblue;}
+.pod-box:nth-child(4) {background: lightgreen;}
+
+.student-circle {
+	height: 60px;
+	width: 60px;
+	z-index: 1000;
+}
+.student-circle img {
+	width: 60px;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	cursor: pointer;
+}
